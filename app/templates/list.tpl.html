@@ -1,1 +1,14 @@
 <h2 class="title">All My Items</h2>
+
+
+<div class="box" ng-repeat="food in allFoods">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{ food.brand }}</strong> <small>{{ food.item }}</small>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
