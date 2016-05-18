@@ -10,7 +10,7 @@ function config ($stateProvider, $urlRouterProvider) {
       controller: 'ListController'
     })
     .state('single', {
-      url: '/single',
+      url: '/single/:foodID',
       templateUrl: 'templates/single.tpl.html',
       controller: 'SingleController'
     })
