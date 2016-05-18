@@ -1,1 +1,12 @@
 <h2 class="title">Add Items</h2>
+
+<form ng-submit="addFoodItem(food)">
+  <p class="control">
+  <input ng-model="food.brand" type="text" class="input" placeholder="Food Brand">
+  </p>
+  <p class="control">
+  <input ng-model="food.item"type="text" class="input" placeholder="Food Item">
+  </p>
+
+  <button class="button is-danger"> Add Food Item</button>
+</form>

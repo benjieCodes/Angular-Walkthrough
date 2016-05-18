@@ -1,7 +1,17 @@
 // Dependency Injection Function
-function AddController () {
+function AddController ($scope, $http, URL) {
+
+  $scope.addFoodItem = function(food) {
+
+    $http.post(URL, food).then( (res) => {
+      console.log(res);
+    })
+      $scope.food = {};
+  }
+
+  // Clear the form
 
 }
 
-AddController.$inject = [];
+AddController.$inject = ['$scope', '$http', 'URL'];
 export { AddController };
