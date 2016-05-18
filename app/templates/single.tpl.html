@@ -1,1 +1,13 @@
 <h2 class="title">Single Item</h2>
+
+<div class="card is-fullwidth">
+  <header class="card-header">
+    <p class="card-header-title">{{ singleFood.item }}</p>
+  </header>
+  <div class="card-content">
+    <div class="content">Made by {{ singleFood.brand }}</div>
+  </div>
+  <footer class="card-footer">
+    <a class="card-footer-item" ng-click="deleteItem(singleFood._id)">Delete</a>
+  </footer>
+</div>

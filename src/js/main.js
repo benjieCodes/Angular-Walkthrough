@@ -9,7 +9,7 @@ import { SingleController } from './controllers/single.controller';
 // Import our Configuration
 import { config } from './config';
 
-const url ='https://secret-forest-21470.herokuapp.com/collections/W8D3L'
+const url ='https://secret-forest-21470.herokuapp.com/collections/W8D3L/'
 // Start Angular
 angular
   // Setter for a module(register)
