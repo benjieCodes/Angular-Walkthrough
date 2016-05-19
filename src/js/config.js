@@ -7,17 +7,17 @@ function config ($stateProvider, $urlRouterProvider) {
     .state('list', {
       url: '/',
       templateUrl: 'templates/list.tpl.html',
-      controller: 'ListController'
+      controller: 'ListController as vm'
     })
     .state('single', {
       url: '/single/:foodID',
       templateUrl: 'templates/single.tpl.html',
-      controller: 'SingleController'
+      controller: 'SingleController as vm'
     })
     .state('add', {
       url: '/add',
       templateUrl: 'templates/add.tpl.html',
-      controller: 'AddController'
+      controller: 'AddController as vm'
     })
   ;
 

@@ -1,16 +1,19 @@
 // Dependency Injection Function
-function SingleController ($scope, $http, URL, $stateParams, $state) {
-  console.log($stateParams.foodID);
+function SingleController ($http, URL, $stateParams, $state) {
+
+  let vm = this;
+
+  vm.deleteItem = deleteItem;
 
   init()
 
   function init() {
     $http.get(URL + $stateParams.foodID).then( (res) => {
-      $scope.singleFood = res.data
+      vm.singleFood = res.data
     })
   }
 
-  $scope.deleteItem = function (foodID) {
+  function deleteItem (foodID) {
     $http.delete(URL + foodID).then ( (res) => {
       $state.go('list');
     })
@@ -20,5 +23,5 @@ function SingleController ($scope, $http, URL, $stateParams, $state) {
 
 }
 
-SingleController.$inject = ['$scope', '$http', 'URL', '$stateParams', '$state'];
+SingleController.$inject = ['$http', 'URL', '$stateParams', '$state'];
 export { SingleController };

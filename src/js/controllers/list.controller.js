@@ -1,16 +1,18 @@
 // Dependency Injection Function
-function ListController ($scope, $http, URL) {
+function ListController ($http, URL) {
+
+  let vm = this;
 
   init();
 
   function init() {
     $http.get(URL).then( (res) => {
       console.log(res);
-      $scope.allFoods = res.data;
+      vm.allFoods = res.data;
     });
   }
 
 }
 
-ListController.$inject = ['$scope', '$http', 'URL'];
+ListController.$inject = ['$http', 'URL'];
 export { ListController }
