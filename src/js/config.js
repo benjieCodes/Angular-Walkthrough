@@ -4,23 +4,26 @@ function config ($stateProvider, $urlRouterProvider) {
 
   // Define our app states
   $stateProvider
-    .state('list', {
+    .state('root',{
+      abstract: true,
+      templateUrl: 'templates/layout.tpl.html',
+    })
+    .state('root.list', {
       url: '/',
       templateUrl: 'templates/list.tpl.html',
       controller: 'ListController as vm'
     })
-    .state('single', {
+    .state('root.single', {
       url: '/single/:foodID',
       templateUrl: 'templates/single.tpl.html',
       controller: 'SingleController as vm'
     })
-    .state('add', {
+    .state('root.add', {
       url: '/add',
       templateUrl: 'templates/add.tpl.html',
       controller: 'AddController as vm'
     })
   ;
-
 }
 
 config.$inject = ['$stateProvider', '$urlRouterProvider'];
